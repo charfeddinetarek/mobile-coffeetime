@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">CoffeeTime</string>
+    <string name="app_subtitle">Commandez depuis votre table</string>
+    <string name="login_title">Identifiez-vous</string>
+    <string name="hint_nom">Votre nom</string>
+    <string name="hint_table">Numéro de table</string>
+    <string name="btn_commencer">Commencer</string>
+    <string name="err_champs_vides">Veuillez remplir tous les champs</string>
+
+    <string name="title_menu">Notre menu</string>
+    <string name="menu_greeting">Bonjour %1$s, table %2$d</string>
+    <string name="drink_espresso">Espresso</string>
+    <string name="drink_cappuccino">Cappuccino</string>
+    <string name="drink_latte">Latte</string>
+    <string name="desc_espresso">Café court et intense</string>
+    <string name="desc_cappuccino">Espresso, lait chaud et mousse</string>
+    <string name="desc_latte">Café doux avec beaucoup de lait</string>
+    <string name="price_fmt">%1$.2f DT</string>
+    <string name="total_label">Total : %1$.2f DT</string>
+    <string name="btn_panier">Voir mon panier</string>
+    <string name="err_panier_vide">Ajoutez au moins une boisson</string>
+    <string name="btn_minus" translatable="false">−</string>
+    <string name="btn_plus" translatable="false">+</string>
+
+    <string name="btn_retour">Retour</string>
+    <string name="title_cart">Mon panier</string>
+    <string name="cart_items_label">Vos boissons</string>
+    <string name="cart_total_label">Total</string>
+    <string name="line_fmt">%1$d × %2$s : %3$.2f DT</string>
+    <string name="hint_note">Remarque (ex. : sans sucre)</string>
+    <string name="pay_label">Mode de paiement</string>
+    <string name="pay_cash">Espèces</string>
+    <string name="pay_card">Carte bancaire</string>
+    <string name="btn_confirmer">Confirmer la commande</string>
+
+    <string name="order_number">Commande n°%1$d</string>
+    <string name="progress_info">Table %1$d, %2$d boisson(s)</string>
+    <string name="state_preparing">Votre commande est en préparation…</string>
+    <string name="state_ready">Votre commande est prête !</string>
+    <string name="btn_ticket">Voir mon ticket</string>
+
+    <string name="title_ticket">Ticket de commande</string>
+    <string name="ticket_customer">Client : %1$s (table %2$d)</string>
+    <string name="ticket_payment">Paiement : %1$s</string>
+    <string name="ticket_note">Remarque : %1$s</string>
+    <string name="ticket_message">Nous l\'apportons à la table %1$d.</string>
+    <string name="btn_nouvelle">Nouvelle commande</string>
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">CoffeeTime</string>
+    <string name="app_subtitle">Order from your table</string>
+    <string name="login_title">Sign in</string>
+    <string name="hint_nom">Your name</string>
+    <string name="hint_table">Table number</string>
+    <string name="btn_commencer">Start</string>
+    <string name="err_champs_vides">Please fill in all fields</string>
+
+    <string name="title_menu">Our menu</string>
+    <string name="menu_greeting">Hello %1$s, table %2$d</string>
+    <string name="drink_espresso">Espresso</string>
+    <string name="drink_cappuccino">Cappuccino</string>
+    <string name="drink_latte">Latte</string>
+    <string name="desc_espresso">Short and intense coffee</string>
+    <string name="desc_cappuccino">Espresso, hot milk and foam</string>
+    <string name="desc_latte">Mild coffee with lots of milk</string>
+    <string name="price_fmt">%1$.2f DT</string>
+    <string name="total_label">Total: %1$.2f DT</string>
+    <string name="btn_panier">View my cart</string>
+    <string name="err_panier_vide">Add at least one drink</string>
+
+    <string name="btn_retour">Back</string>
+    <string name="title_cart">My cart</string>
+    <string name="cart_items_label">Your drinks</string>
+    <string name="cart_total_label">Total</string>
+    <string name="line_fmt">%1$d × %2$s: %3$.2f DT</string>
+    <string name="hint_note">Note (e.g. no sugar)</string>
+    <string name="pay_label">Payment method</string>
+    <string name="pay_cash">Cash</string>
+    <string name="pay_card">Card</string>
+    <string name="btn_confirmer">Confirm order</string>
+
+    <string name="order_number">Order #%1$d</string>
+    <string name="progress_info">Table %1$d, %2$d drink(s)</string>
+    <string name="state_preparing">Your order is being prepared…</string>
+    <string name="state_ready">Your order is ready!</string>
+    <string name="btn_ticket">View my receipt</string>
+
+    <string name="title_ticket">Order receipt</string>
+    <string name="ticket_customer">Customer: %1$s (table %2$d)</string>
+    <string name="ticket_payment">Payment: %1$s</string>
+    <string name="ticket_note">Note: %1$s</string>
+    <string name="ticket_message">We will bring it to table %1$d.</string>
+    <string name="btn_nouvelle">New order</string>
+</resources>

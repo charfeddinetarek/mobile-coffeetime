@@ -1,0 +1,60 @@
+package com.example.coffeetime;
+
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SingleActivity extends AppCompatActivity {
+
+    private String nom = "", paiement = "", note = "";
+    private int table = 0, numero = 0, duree = 10;
+    private int[] qtes = new int[Carte.NB];
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        afficherAccueil();
+    }
+
+    private void afficherAccueil() {
+        setContentView(R.layout.activity_main);
+        EditText editNom = findViewById(R.id.editNom);
+        EditText editTable = findViewById(R.id.editTable);
+        findViewById(R.id.btnCommencer).setOnClickListener(v -> {
+            nom = editNom.getText().toString().trim();
+            String t = editTable.getText().toString().trim();
+            if (nom.isEmpty() || t.isEmpty()) {
+                Toast.makeText(this, R.string.err_champs_vides, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            table = Integer.parseInt(t);
+            afficherMenu();
+        });
+    }
+
+    private void afficherMenu() {
+        setContentView(R.layout.activity_menu);
+        // même logique que MenuActivity ; au clic sur « Voir mon panier » : afficherPanier();
+    }
+
+    private void afficherPanier() {
+        setContentView(R.layout.activity_cart);
+        // même logique que CartActivity ; au clic sur « Confirmer » : afficherProgression();
+    }
+
+    private void afficherProgression() {
+        setContentView(R.layout.activity_progress);
+        // même logique Handler que ProgressActivity ; au clic sur « Voir mon ticket » : afficherTicket();
+    }
+
+    private void afficherTicket() {
+        setContentView(R.layout.activity_ticket);
+        // même logique que TicketActivity ; « Nouvelle commande » : réinitialiser les champs puis afficherAccueil();
+    }
+
+    @Override
+    public void onBackPressed() {
+        afficherAccueil();   // gestion simple du retour
+    }
+}

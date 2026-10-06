@@ -1,0 +1,4 @@
+// Fichier de build racine : versions des plugins pour tous les modules
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
+}

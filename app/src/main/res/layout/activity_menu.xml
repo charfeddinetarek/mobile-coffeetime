@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- En-tête : RelativeLayout -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="#795548"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitreMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_menu"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitreMenu"
+            android:textColor="#EFEBE9"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <!-- Pied de page : total et bouton panier -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#EFEBE9"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTotalMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPanier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#795548"
+            android:text="@string/btn_panier"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Liste des boissons : LinearLayout contenant des cartes RelativeLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- ===== Carte Espresso ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#EFEBE9"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/iconEspresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="☕"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:id="@+id/ctrlEspresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMoinsEspresso"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="@string/btn_minus" />
+
+                <TextView
+                    android:id="@+id/tvQteEspresso"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnPlusEspresso"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="@string/btn_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomEspresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@id/ctrlEspresso"
+                android:layout_toEndOf="@id/iconEspresso"
+                android:text="@string/drink_espresso"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descEspresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nomEspresso"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@id/ctrlEspresso"
+                android:layout_toEndOf="@id/iconEspresso"
+                android:text="@string/desc_espresso"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/prixEspresso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descEspresso"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/iconEspresso"
+                android:textColor="#795548"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- ===== Carte Cappuccino ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#EFEBE9"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/iconCappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="☕"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:id="@+id/ctrlCappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMoinsCappuccino"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="@string/btn_minus" />
+
+                <TextView
+                    android:id="@+id/tvQteCappuccino"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnPlusCappuccino"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="@string/btn_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomCappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@id/ctrlCappuccino"
+                android:layout_toEndOf="@id/iconCappuccino"
+                android:text="@string/drink_cappuccino"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descCappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nomCappuccino"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@id/ctrlCappuccino"
+                android:layout_toEndOf="@id/iconCappuccino"
+                android:text="@string/desc_cappuccino"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/prixCappuccino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descCappuccino"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/iconCappuccino"
+                android:textColor="#795548"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- ===== Carte Latte ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#EFEBE9"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/iconLatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="☕"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:id="@+id/ctrlLatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMoinsLatte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="@string/btn_minus" />
+
+                <TextView
+                    android:id="@+id/tvQteLatte"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnPlusLatte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="@string/btn_plus" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomLatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@id/ctrlLatte"
+                android:layout_toEndOf="@id/iconLatte"
+                android:text="@string/drink_latte"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descLatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nomLatte"
+                android:layout_marginStart="12dp"
+                android:layout_toStartOf="@id/ctrlLatte"
+                android:layout_toEndOf="@id/iconLatte"
+                android:text="@string/desc_latte"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/prixLatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descLatte"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/iconLatte"
+                android:textColor="#795548"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
